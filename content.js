@@ -21,15 +21,16 @@ chrome.runtime.onMessage.addListener((request) => {
 
 
         let textArea = document.getElementById('prompt-textarea');
-        // insert customize button adjacent to text area
         textArea.parentElement.insertAdjacentElement('afterbegin', customizeButton);
 
         chrome.storage.sync.get(['color', 'backgroundColor', 'fontFamily'], function (items) {
             document.body.style.color = items.color;
-            document.documentElement.style.color = items.color;
-            document.documentElement.style.backgroundColor = items.backgroundColor;
             document.body.style.backgroundColor = items.backgroundColor;
             document.body.style.fontFamily = items.fontFamily;
+
+            // remove gradient color at the bottom of the page
+            let gradientColor = document.querySelectorAll('div.absolute.bottom-0.left-0')[0];
+            gradientColor.classList.remove(...gradientColor.classList);
         });
     }
 });
