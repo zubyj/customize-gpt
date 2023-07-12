@@ -8,30 +8,36 @@
 </head>
 
 <body>
-    <h1>Customize ChatGPT</h1>
-    <div class="option">
-        <label for="color">Text Color</label>
-        <input type="color" id="color" name="color">
-    </div>
-    <div class="option">
-        <label for="backgroundColor">Background Color</label>
-        <input type="color" id="backgroundColor" name="backgroundColor">
-    </div>
+    <div class="options">
+        <h1>Customize ChatGPT</h1>
+        <div class="option">
+            <label for="fontFamily">Font Family</label>
+            <select id="fontFamily">
+                <option value="Comic Sans MS, Comic Sans, cursive">Comic Sans</option>
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Times New Roman, Times, serif">Times New Roman</option>
+                <option value="Courier New, Courier, monospace">Courier New</option>
+                <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="Palatino, Palatino Linotype, Book Antiqua, serif">Palatino</option>
+                <option value="Garamond, serif">Garamond</option>
+            </select>
+        </div>
+        <div class="option">
+            <label for="backgroundColor">Primary Color</label>
+            <input type="color" id="backgroundColor" name="backgroundColor">
+        </div>
+        <div class="option">
+            <label for="backgroundColor">Secondary Color</label>
+            <input type="color" id="secondaryColor" name="secondaryColor">
+        </div>
+        <div class="option">
+            <label for="color">Text Color</label>
+            <input type="color" id="color" name="color">
+        </div>
 
-    <div class="option">
-        <label for="fontFamily">Font Family</label>
-        <select id="fontFamily">
-            <option value="Comic Sans MS, Comic Sans, cursive">Comic Sans</option>
-            <option value="Arial, sans-serif">Arial</option>
-            <option value="Times New Roman, Times, serif">Times New Roman</option>
-            <option value="Courier New, Courier, monospace">Courier New</option>
-            <option value="Verdana, Geneva, sans-serif">Verdana</option>
-            <option value="Georgia, serif">Georgia</option>
-            <option value="Palatino, Palatino Linotype, Book Antiqua, serif">Palatino</option>
-            <option value="Garamond, serif">Garamond</option>
-        </select>
+        <button id="apply">Apply</button>
     </div>
-    <button id="apply">Apply</button>
 </body>
 
 </html>

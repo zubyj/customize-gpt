@@ -5,7 +5,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 
 chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
+    function (request) {
         if (request.message === 'open_new_tab') {
             chrome.tabs.create({ url: request.url });
         }
