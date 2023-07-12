@@ -46,6 +46,12 @@ chrome.runtime.onMessage.addListener((request) => {
                     paragraphs[i].style.color = items.color;
                 }
 
+                let code = document.querySelectorAll('code');
+                for (let i = 0; i < code.length; i++) {
+                    code[i].style.color = items.color;
+                }
+
+
             });
             textArea.style.color = 'black';
         }, 1000);
