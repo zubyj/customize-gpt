@@ -3,10 +3,30 @@
     "name": "Customize GPT",
     "version": "0.0.1",
     "description": "Adds themes to the ChatGPT website",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "options.html"
+    },
     "content_scripts": [
         {
             "js": [
                 "content.js"
+            ],
+            "matches": [
+                "https://chat.openai.com/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "customize-icon.png"
             ],
             "matches": [
                 "https://chat.openai.com/*"
