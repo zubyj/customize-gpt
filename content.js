@@ -40,9 +40,14 @@ chrome.runtime.onMessage.addListener((request) => {
                     }
                     divs[i].style.color = items.color;
                 }
-            });
 
+                let paragraphs = document.querySelectorAll('p');
+                for (let i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.color = items.color;
+                }
+
+            });
             textArea.style.color = 'black';
-        }, 2000);
+        }, 1000);
     }
 });
