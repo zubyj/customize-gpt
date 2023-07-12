@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Customize GPT",
+    "version": "0.0.1",
+    "description": "Adds themes to the ChatGPT website",
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://chat.openai.com/*"
+            ]
+        }
+    ]
+}
